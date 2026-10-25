@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="College Festival Event Portal">
+    <meta name="description" content="TechFest 2026 College Event Portal - Explore events, view schedules, register for competitions, and celebrate innovation.">
+    <meta name="theme-color" content="#0f172a">
+
     <title>TechFest 2026 - College Event Portal</title>
 
     <link rel="stylesheet" href="style.css">
@@ -22,10 +25,18 @@
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a
+                        href="https://college-event-portal-jbde.onrender.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Live Website ↗
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
-
 
     <!-- Homepage -->
     <main>
@@ -34,20 +45,24 @@
             <div class="hero-content">
                 <h1>TECHFEST 2026</h1>
 
-                <p>
-                    The Annual Technical and Cultural Festival
-                </p>
+                <p>The Annual Technical and Cultural Festival</p>
 
-                <p>
-                    Learn • Compete • Innovate • Celebrate
-                </p>
+                <p>Learn • Compete • Innovate • Celebrate</p>
 
-                <button onclick="scrollToEvents()">
+                <button type="button" onclick="scrollToEvents()">
                     Explore Events
                 </button>
+
+                <a
+                    href="https://college-event-portal-jbde.onrender.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="live-site-button"
+                >
+                    Visit Live Website ↗
+                </a>
             </div>
         </section>
-
 
         <!-- Announcement -->
         <section class="announcement">
@@ -57,15 +72,13 @@
                 Registration is now open for all events!
             </p>
 
-            <button onclick="changeAnnouncement()">
+            <button type="button" onclick="changeAnnouncement()">
                 View Update
             </button>
         </section>
 
-
         <!-- Event Listings -->
         <section id="events" class="section">
-
             <h2>Event Listings</h2>
 
             <div class="event-container">
@@ -76,11 +89,13 @@
                     <p><strong>Date:</strong> 15 October 2026</p>
                     <p><strong>Time:</strong> 10:00 AM</p>
 
-                    <button onclick="registerEvent('Code Challenge')">
+                    <button
+                        type="button"
+                        onclick="registerEvent('Code Challenge')"
+                    >
                         Register
                     </button>
                 </article>
-
 
                 <article class="event-card">
                     <h3>AI Innovation</h3>
@@ -88,11 +103,13 @@
                     <p><strong>Date:</strong> 15 October 2026</p>
                     <p><strong>Time:</strong> 11:30 AM</p>
 
-                    <button onclick="registerEvent('AI Innovation')">
+                    <button
+                        type="button"
+                        onclick="registerEvent('AI Innovation')"
+                    >
                         Register
                     </button>
                 </article>
-
 
                 <article class="event-card">
                     <h3>Web Design</h3>
@@ -100,11 +117,13 @@
                     <p><strong>Date:</strong> 16 October 2026</p>
                     <p><strong>Time:</strong> 10:00 AM</p>
 
-                    <button onclick="registerEvent('Web Design')">
+                    <button
+                        type="button"
+                        onclick="registerEvent('Web Design')"
+                    >
                         Register
                     </button>
                 </article>
-
 
                 <article class="event-card">
                     <h3>Quiz Competition</h3>
@@ -112,7 +131,10 @@
                     <p><strong>Date:</strong> 16 October 2026</p>
                     <p><strong>Time:</strong> 2:00 PM</p>
 
-                    <button onclick="registerEvent('Quiz Competition')">
+                    <button
+                        type="button"
+                        onclick="registerEvent('Quiz Competition')"
+                    >
                         Register
                     </button>
                 </article>
@@ -120,10 +142,8 @@
             </div>
         </section>
 
-
         <!-- Registration Form -->
         <section id="registration" class="section">
-
             <h2>Event Registration</h2>
 
             <form id="registrationForm">
@@ -132,53 +152,54 @@
                 <input
                     type="text"
                     id="name"
+                    name="name"
                     placeholder="Enter your name"
+                    required
                 >
 
                 <label for="email">Email</label>
                 <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Enter your email"
+                    required
                 >
 
                 <label for="college">College Name</label>
                 <input
                     type="text"
                     id="college"
+                    name="college"
                     placeholder="Enter college name"
+                    required
                 >
 
                 <label for="event">Select Event</label>
 
-                <select id="event">
+                <select id="event" name="event" required>
                     <option value="">-- Select Event --</option>
-                    <option>Code Challenge</option>
-                    <option>AI Innovation</option>
-                    <option>Web Design</option>
-                    <option>Quiz Competition</option>
+                    <option value="Code Challenge">Code Challenge</option>
+                    <option value="AI Innovation">AI Innovation</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Quiz Competition">Quiz Competition</option>
                 </select>
 
                 <button type="submit">
                     Submit Registration
                 </button>
 
-                <p id="formMessage"></p>
+                <p id="formMessage" aria-live="polite"></p>
 
             </form>
-
         </section>
-
 
         <!-- Schedule -->
         <section id="schedule" class="section">
-
             <h2>Event Schedule</h2>
 
             <div class="table-container">
-
                 <table>
-
                     <thead>
                         <tr>
                             <th>Date</th>
@@ -189,47 +210,40 @@
                     </thead>
 
                     <tbody>
-
                         <tr>
-                            <td>15 Oct</td>
+                            <td>15 Oct 2026</td>
                             <td>10:00 AM</td>
                             <td>Code Challenge</td>
                             <td>Lab 1</td>
                         </tr>
 
                         <tr>
-                            <td>15 Oct</td>
+                            <td>15 Oct 2026</td>
                             <td>11:30 AM</td>
                             <td>AI Innovation</td>
                             <td>Seminar Hall</td>
                         </tr>
 
                         <tr>
-                            <td>16 Oct</td>
+                            <td>16 Oct 2026</td>
                             <td>10:00 AM</td>
                             <td>Web Design</td>
                             <td>Lab 2</td>
                         </tr>
 
                         <tr>
-                            <td>16 Oct</td>
+                            <td>16 Oct 2026</td>
                             <td>2:00 PM</td>
                             <td>Quiz Competition</td>
                             <td>Auditorium</td>
                         </tr>
-
                     </tbody>
-
                 </table>
-
             </div>
-
         </section>
-
 
         <!-- Gallery -->
         <section id="gallery" class="section">
-
             <h2>Event Gallery</h2>
 
             <div class="gallery">
@@ -237,7 +251,8 @@
                 <div class="gallery-item">
                     <img
                         src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
-                        alt="College event"
+                        alt="College technical event"
+                        loading="lazy"
                     >
                     <h3>Technical Events</h3>
                 </div>
@@ -246,6 +261,7 @@
                     <img
                         src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
                         alt="Students participating in an event"
+                        loading="lazy"
                     >
                     <h3>Student Activities</h3>
                 </div>
@@ -253,47 +269,44 @@
                 <div class="gallery-item">
                     <img
                         src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=600&q=80"
-                        alt="College auditorium event"
+                        alt="College festival gathering"
+                        loading="lazy"
                     >
                     <h3>Festival Moments</h3>
                 </div>
 
             </div>
-
         </section>
-
 
         <!-- Contact -->
         <section id="contact" class="section contact">
-
             <h2>Contact Us</h2>
 
             <p><strong>College:</strong> ABC Engineering College</p>
-
             <p><strong>Email:</strong> techfest@college.edu</p>
-
             <p><strong>Phone:</strong> +91 98765 43210</p>
-
             <p><strong>Address:</strong> Chennai, Tamil Nadu</p>
-
         </section>
 
     </main>
 
-
     <!-- Footer -->
     <footer>
+        <p>© 2026 TechFest College Event Portal</p>
+
+        <p>Designed using HTML5, CSS3 and JavaScript</p>
 
         <p>
-            © 2026 TechFest College Event Portal
+            Live Website:
+            <a
+                href="https://college-event-portal-jbde.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                college-event-portal-jbde.onrender.com
+            </a>
         </p>
-
-        <p>
-            Designed using HTML5, CSS3 and JavaScript
-        </p>
-
     </footer>
-
 
     <script src="script.js"></script>
 

@@ -403,3 +403,18 @@ footer {
     }
 
 }
+.live-site-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 15px 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.live-site-button:hover {
+    background-color: #1d4ed8;
+}
